@@ -87,9 +87,8 @@ class ContratoController extends Controller
             'personal_id' => ['required', 'integer'],
             'Cargo' => ['required'],
             'Local' => ['required'],
-            'Local' => ['required'],
             'Inicio' => ['required', 'date'],
-            'Fin' => ['required', 'date'],
+            'Fin' => ['required', 'date', 'after:Inicio'],
             'Tipo' => ['required', 'integer'],
         ]);
 
